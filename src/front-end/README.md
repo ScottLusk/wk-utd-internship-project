@@ -2,13 +2,16 @@
 
 Front end was created using Angular CLI v13 and will connect to the .NET core webapi project.
 
-## Setup Instructions nad Pre-requisities
+## Setup Instructions and Pre-requisities
 
 -Install node.js
+
 -Install npm 
+
 -Run 'npm install -g @angular/cli' to install Angular CLI
 
 -navigate to src/front-end
+
 -Run 'npm install' to download all node modules required.
 
 ## Development server
