@@ -7,6 +7,8 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { ShowComponent } from './account-details/show/show.component';
 import { WebapiService } from './webapi.service';
 
+import {HttpClientModule} from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { WebapiService } from './webapi.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [WebapiService],
   bootstrap: [AppComponent]
