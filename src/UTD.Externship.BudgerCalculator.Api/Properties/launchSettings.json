@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "webapi": {
+    "BudgetCalculatorApi": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
