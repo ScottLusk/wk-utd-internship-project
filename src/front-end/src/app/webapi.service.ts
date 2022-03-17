@@ -38,7 +38,7 @@ export class WebapiService {
         categoryId:1
       }
     ];
-  accountdetails: Account = { id :1, accountNumber :101, userId :1, firstName :"Toshal", middleName:"R",lastName:"Tambave", balance: 2000};
+  accountdetails: Account = { id :1, accountNumber :101, userId :1, firstName :"Toshal", middleName:"R",lastName:"Tambave"};
   constructor(private http:HttpClient) { }
 
   getAccountDetails(accountNumber:string){
@@ -51,6 +51,8 @@ export class WebapiService {
   }
 
   addTransaction(transaction:any){
+    console.log('form data', transaction.toString())
     return this.http.post(this.APIBaseUrl+'test', transaction)
   }
+
 }

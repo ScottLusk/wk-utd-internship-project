@@ -5,6 +5,5 @@ export class Account{
     firstName: string
     middleName: string
     lastName: string
-    balance:number
 }
 

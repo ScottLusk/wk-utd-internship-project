@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { WebapiService } from 'src/app/webapi.service';
 import { Transaction } from 'src/app/Transaction';
+import { FormControl, FormGroup, NgForm, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-add-trans',
@@ -9,21 +10,30 @@ import { Transaction } from 'src/app/Transaction';
 })
 export class AddTransComponent implements OnInit {
 
-  constructor(private service:WebapiService) { }
-  transaction:Transaction
+  @Input() dep:any;
+  tranDate:string;
+  description:string;
+  amount:number
+  tranType:number
 
+  constructor(private service:WebapiService) { }
+  
   ngOnInit(): void {
+    this.tranDate=this.dep.tranDate,
+    this.description=this.dep.description;
+    this.amount=this.dep.amount;
+    this.tranType=this.dep.tranType;
   }
 
-  addTransaction(): void{
-    var transaction = 
-    {
-      transactionDate :this.transaction.transactionDate,
-      description: this.transaction.description,
-      amount: this.transaction.amount
-    };
+  addDepartment(){
+    alert('alert')
+    var val = {tranDate:this.tranDate,
 
-    this.service.addTransaction(transaction).subscribe(res=>{
+                description:this.description,
+                amount:this.amount,
+                tranType:this.tranType};
+    console.log(val.tranDate.toString());
+    this.service.addTransaction(val).subscribe(res=>{
       alert(res.toString());
     });
   }

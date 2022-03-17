@@ -1,13 +1,15 @@
-<h4>Your Transactions</h4>
+<div class="row hr"></div>
+<h4 class="bg ">Your Transactions</h4>
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary float-right m-2" 
+<button type="button" class="btn btn-primary m-2 bg" 
 data-toggle="modal" data-target="#exampleModal"
 (click)="addClick()"
 data-backdrop="static" data-keyboard="false">
-    Add Transaction
+<i class="bi bi-plus-circle"></i>
+    Add New
 </button>
 <table class="table table-striped">
-    <thead>
+    <thead class="bg">
         <tr>
             <th>Date</th>
             <th>Description</th>
@@ -17,7 +19,6 @@ data-backdrop="static" data-keyboard="false">
     <tbody>
         <tr *ngFor="let transaction of transactionList">
             <td>{{transaction.transactionDate}}</td>
-            {{transaction.id}}
             <td>{{transaction.description}}</td>
             <td>{{transaction.amount}}</td>                
         </tr>
