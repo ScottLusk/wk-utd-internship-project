@@ -9,12 +9,18 @@ import { WebapiService } from './webapi.service';
 
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TransactionsComponent } from './transactions/transactions.component';
+import { ShowTransComponent } from './transactions/show-trans/show-trans.component';
+import { AddTransComponent } from './transactions/add-trans/add-trans.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountDetailsComponent,
-    ShowComponent
+    ShowComponent,
+    TransactionsComponent,
+    ShowTransComponent,
+    AddTransComponent
   ],
   imports: [
     BrowserModule,

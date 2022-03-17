@@ -1,1 +1,25 @@
-<p>show works!</p>
+<div class="container">
+    <h2>Welcome, {{accountdetails.firstName}} {{accountdetails.lastName}}</h2>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                Checking Account
+              </div>
+              <div class="col">
+                <label>${{accountdetails.balance}}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label>#{{accountdetails.accountNumber}}</label>
+              </div>
+              <div class="col">
+                available balance
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
