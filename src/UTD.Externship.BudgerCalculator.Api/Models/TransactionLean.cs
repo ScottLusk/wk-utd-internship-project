@@ -14,7 +14,6 @@ namespace UTD.Externship.BudgetCalculator.Api.Models
         public string Description { get; set; }
         public decimal Amount { get; set; }
 
-        [JsonIgnore]
         public TransactionType TransactionType { get; set; }
 
         [JsonIgnore]

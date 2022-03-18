@@ -14,3 +14,14 @@ opacity: 0.25;
     color: #21B6A8;
     font-weight: bold;
 }
+
+.btn-primary {
+    color: #fff;
+    background-color: #21B6A8;
+    border-color: #21B6A8; /*set the color you want here*/
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #21B6A8;
+    border-color: #21B6A8; /*set the color you want here*/
+}
