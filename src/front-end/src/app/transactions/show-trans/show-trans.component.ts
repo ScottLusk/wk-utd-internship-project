@@ -32,7 +32,6 @@ export class ShowTransComponent implements OnInit {
 
   refreshTransactionList(){
     this.service.getTransactions(this.AccountNumber).subscribe(data=>{
-      debugger;
       this.transactionList=data;
     })
   }
