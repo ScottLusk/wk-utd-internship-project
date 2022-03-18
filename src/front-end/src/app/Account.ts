@@ -1,9 +1,7 @@
 export class Account{
     id: number
-    accountNumber: number
+    AccountNumber: number
     userId: number
-    firstName: string
-    middleName: string
-    lastName: string
+    UserFullName: string
 }
 

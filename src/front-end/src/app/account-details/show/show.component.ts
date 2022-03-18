@@ -8,7 +8,7 @@ import { Account } from 'src/app/Account';
   styleUrls: ['./show.component.css']
 })
 export class ShowComponent implements OnInit {
-  AccountNumber:string = "1234";
+  AccountNumber:string = "123";
   loading: boolean = false;
   errorMessage:any;
   accountdetails:Account
@@ -18,21 +18,21 @@ export class ShowComponent implements OnInit {
 
   }
 
-  AccountDetails:any;
 
   ngOnInit(): void {
     this.refreshAccountDetails();
-    this.getAccountDetails();
+    // this.getAccountDetails();
   }
 
   refreshAccountDetails(){
-    // this.service.getAccountDetails(this.AccountNumber).subscribe(data=>{
-    //   this.AccountDetails=data;
-    // })
+    this.service.getAccountDetails(this.AccountNumber).subscribe(data=>{
+      debugger;
+      this.accountdetails=data;
+    })
   }
 
-  public getAccountDetails() {
-    this.accountdetails = this.service.getAccountDetails(this.AccountNumber);
-  }
+  // public getAccountDetails() {
+  //   this.accountdetails = this.service.getAccountDetails(this.AccountNumber);
+  // }
 }    
 

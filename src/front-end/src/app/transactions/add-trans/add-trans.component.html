@@ -52,13 +52,13 @@
     <div class="col-sm-10">
         <select class="form-select form-select-sm form-control" aria-label=".form-select-sm example"
         name="type" [(ngModel)]="tranType" aria-placeholder="Select">
-        <option value="Credit">Credit</option>
-        <option value="Debit">Debit</option>
+        <option value="0">Credit</option>
+        <option value="1">Debit</option>
     </select>
     </div>
 </div>
 
-<button (click)="addDepartment()" class="btn btn-primary bg">
+<button (click)="addTransaction()" class="btn btn-primary bg" data-dismiss="modal">
     Add
 </button>
 

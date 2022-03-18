@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WebapiService } from 'src/app/webapi.service';
-import { Transaction } from 'src/app/Transaction';
+import { TransactionList } from 'src/app/TransactionList';
+
 
 @Component({
   selector: 'app-show-trans',
@@ -8,14 +9,12 @@ import { Transaction } from 'src/app/Transaction';
   styleUrls: ['./show-trans.component.css']
 })
 export class ShowTransComponent implements OnInit {
-  transactionList:Transaction[];
+  AccountNumber:string = "123";
+  transactionList:TransactionList;
   ModalTitle:string="";
   ActivateAddTranComp:boolean=false;
 
   constructor(private service:WebapiService) {
-    
-
-    console.log(JSON.stringify(this.transactionList, null, 4));
    }
   
   ngOnInit(): void {
@@ -32,7 +31,10 @@ export class ShowTransComponent implements OnInit {
   }
 
   refreshTransactionList(){
-    this.transactionList = this.service.getTransactions()
+    this.service.getTransactions(this.AccountNumber).subscribe(data=>{
+      debugger;
+      this.transactionList=data;
+    })
   }
 
 }

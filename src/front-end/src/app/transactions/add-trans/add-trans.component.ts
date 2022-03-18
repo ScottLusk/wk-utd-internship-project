@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { WebapiService } from 'src/app/webapi.service';
 import { Transaction } from 'src/app/Transaction';
 import { FormControl, FormGroup, NgForm, FormBuilder } from '@angular/forms';
+import { TransactionRequest } from 'src/app/TransactionRequest';
 
 @Component({
   selector: 'app-add-trans',
@@ -11,10 +12,12 @@ import { FormControl, FormGroup, NgForm, FormBuilder } from '@angular/forms';
 export class AddTransComponent implements OnInit {
 
   @Input() dep:any;
+  AccountNumber:string = "123";
   tranDate:string;
   description:string;
   amount:number
   tranType:number
+  request:TransactionRequest
 
   constructor(private service:WebapiService) { }
   
@@ -22,19 +25,17 @@ export class AddTransComponent implements OnInit {
     this.tranDate=this.dep.tranDate,
     this.description=this.dep.description;
     this.amount=this.dep.amount;
-    this.tranType=this.dep.tranType;
+    this.tranType=Number(this.dep.tranType);
   }
 
-  addDepartment(){
-    alert('alert')
-    var val = {tranDate:this.tranDate,
-
-                description:this.description,
-                amount:this.amount,
-                tranType:this.tranType};
-    console.log(val.tranDate.toString());
-    this.service.addTransaction(val).subscribe(res=>{
-      alert(res.toString());
+  addTransaction(){
+    this.request = { TransactionDate:this.tranDate,
+                Description:this.description,
+                Amount:this.amount,
+                Type:Number(this.tranType),
+                AccountNumber:this.AccountNumber};
+    this.service.addTransaction(this.request).subscribe(res=>{
+      alert('Success');
     });
   }
 }

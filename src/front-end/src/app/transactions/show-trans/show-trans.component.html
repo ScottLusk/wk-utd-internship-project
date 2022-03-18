@@ -17,10 +17,10 @@ data-backdrop="static" data-keyboard="false">
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let transaction of transactionList">
-            <td>{{transaction.transactionDate}}</td>
-            <td>{{transaction.description}}</td>
-            <td>{{transaction.amount}}</td>                
+        <tr *ngFor="let t of transactionList.Transactions">
+            <td>{{t.TransactionDate}}</td>
+            <td>{{t.Description}}</td>
+            <td>{{t.FormattedAmount}}</td>                
         </tr>
     </tbody>
 </table>

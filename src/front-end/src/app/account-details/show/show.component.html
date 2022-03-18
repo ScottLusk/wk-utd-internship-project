@@ -1,6 +1,6 @@
 <h3 class="d-flex justify-content-center txt">PENGUIN BUDGET CALCULATOR</h3>
 <div class="container-fluid bg">
-    <h2>Welcome, {{accountdetails.firstName}} {{accountdetails.lastName}}</h2>
+    <h2>Welcome, {{accountdetails.UserFullName}}</h2>
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="container-fluid bg">
@@ -9,12 +9,12 @@
                 Checking Account
               </div>
               <div class="col">
-                <label>${{accountdetails.accountNumber}}</label>
+                <label>${{accountdetails.AccountNumber}}</label>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <label>#{{accountdetails.accountNumber}}</label>
+                <label>#{{accountdetails.AccountNumber}}</label>
               </div>
               <div class="col">
                 available balance
