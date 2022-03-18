@@ -1,0 +1,68 @@
+<!-- <div class="form-froup row">
+    <form #transactionForm="ngForm" (ngSubmit)="addTransaction(transactionForm.value)">
+        <label class="col-sm-2 col-form-label">Date</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control"
+            placeholder="MM/DD/YY" 
+            name="transactionDate" ngModel>
+        </div>
+        <label class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" 
+            placeholder="Add details about your transaction"
+            name="description" ngModel>
+        </div>
+        <label class="col-sm-2 col-form-label">Amount</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" 
+            placeholder="$00.00"
+            name="transaction.amount" ngModel>
+        </div>
+        <select class="form-select" aria-label="Transaction Type"
+            name="type" ngModel>
+            <option value="Credit">Credit</option>
+            <option value="Debit">Debit</option>
+        </select>
+        <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="addTransaction('sd')">
+            Add
+        </button>
+    </form>
+</div> -->
+
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label">Date</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control"
+        placeholder="MM/DD/YY" 
+        name="transactionDate" [(ngModel)]="tranDate">
+    </div>
+    <label class="col-sm-2 col-form-label">Description</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" 
+        placeholder="Add details about your transaction"
+        name="description" [(ngModel)]="description">
+    </div>
+    <label class="col-sm-2 col-form-label">Amount</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" 
+        placeholder="$00.00"
+        name="transaction.amount" [(ngModel)]="amount">
+    </div>
+    <label class="col-sm-2 col-form-label">Transaction Type</label>
+    <div class="col-sm-10">
+        <select class="form-select form-select-sm form-control" aria-label=".form-select-sm example"
+        name="type" [(ngModel)]="tranType" aria-placeholder="Select">
+        <option value="0">Credit</option>
+        <option value="1">Debit</option>
+    </select>
+    </div>
+</div>
+
+<button (click)="addTransaction()" class="btn btn-primary bg" data-dismiss="modal">
+    Add
+</button>
+
+
+
+
+

@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+.bg {
+    background: #21B6A8; color: #fff;
+}
+       
+.hr {
+margin: 1rem 0;
+color: inherit;
+background-color: currentColor;
+border: 0;
+opacity: 0.25;
+}
+.txt{
+    color: #21B6A8;
+    font-weight: bold;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #21B6A8;
+    border-color: #21B6A8; /*set the color you want here*/
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #21B6A8;
+    border-color: #21B6A8; /*set the color you want here*/
+}
