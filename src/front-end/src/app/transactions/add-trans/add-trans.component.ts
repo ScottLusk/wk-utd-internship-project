@@ -36,10 +36,7 @@ export class AddTransComponent implements OnInit {
                 Type:Number(this.tranType),
                 AccountNumber:this.AccountNumber};
     this.service.addTransaction(this.request).subscribe(res=>{
-      alert('Success');
+      alert('Transaction added');
     });
-    
-    let showTran = new ShowTransComponent(this.service);
-    showTran.refreshTransactionList();
   }
 }
