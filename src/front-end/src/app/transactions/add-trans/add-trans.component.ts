@@ -3,6 +3,7 @@ import { WebapiService } from 'src/app/webapi.service';
 import { Transaction } from 'src/app/Transaction';
 import { FormControl, FormGroup, NgForm, FormBuilder } from '@angular/forms';
 import { TransactionRequest } from 'src/app/TransactionRequest';
+import { ShowTransComponent } from '../show-trans/show-trans.component';
 
 @Component({
   selector: 'app-add-trans',
@@ -37,5 +38,8 @@ export class AddTransComponent implements OnInit {
     this.service.addTransaction(this.request).subscribe(res=>{
       alert('Success');
     });
+    
+    let showTran = new ShowTransComponent(this.service);
+    showTran.refreshTransactionList();
   }
 }
